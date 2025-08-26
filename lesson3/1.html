@@ -35,9 +35,10 @@
     <script>
         let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
         document.write('<ul>')
-            for (item of listOfItems){
-                document.write(`<li>${item}</li> `)
-            }
+        for (let i = 0; i < listOfItems.length; i++) {
+            const Item = listOfItems[i];
+            document.write(`<li>${Item}</li>`)
+        }
         document.write('</ul>')
     </script>
     <script>
