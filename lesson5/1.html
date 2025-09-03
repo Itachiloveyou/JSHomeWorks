@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let area = (a, b) => a + b;
+
+
+    let area2 = (r, pi) => pi * (r * r);
+
+
+    let area3 = (h, p, r) => 2 * pi * r * h;
+
+
+    let arrayCheker = (arr) => {
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+    }
+
+
+    let paragraph = (text) => text;
+    console.log(paragraph('asjfngwgwrhrh'));
+
+    let liCreator = (text) => {
+        document.write(`<ul>
+            <li>${text}</li>
+            <li>${text}</li>
+            <li>${text}</li>
+    <ul>`)
+    }
+
+    let liCreator2 = (count) => {
+        document.write(`<ul>`)
+        for (let i = 0; i < count; i++) {
+            document.write(`<li>${count}</li>`)
+        }
+        document.write(`</ul>`)
+    }
+
+
+    let arrayVision = (arr) => {
+        document.write(`<ul>`)
+        for (let i = 0; i < arr.length; i++) {
+            document.write(`<li>${arr[i]}</li>`);
+        }
+        document.write(`</ul>`)
+    }
+
+    let users = [
+        {name: 'John', age: 30, id:1},
+        {name: 'Mary', age: 18, id:2},
+        {name: 'Nick', age: 44, id:3}
+    ]
+    let userCheker = (arr) => {
+        for (let user of arr){
+            document.write(`<ul>`)
+            document.write(`<li>${user.name}, ${user.age}, ${user.id}</li>`)
+
+        }
+        document.write(`</ul>`)
+    }
+
+    arr = [1,2,3]
+    let minValue = (arr) => {
+        let min = arr[0];
+        for (let number of arr) {
+            if (number < min){
+                min = number;
+            }
+        }
+        return min;
+    }
+
+    let sum = (arr) => {
+        let sum = 0;
+        for (let number of arr) {
+            sum += number;
+        }
+        return sum
+    }
+    let wg = [1,2,3,4]
+    console.log(sum(wg));
+
+
+    let swap = (arr, index0, index1) => {
+        let a = arr[index0];
+        arr[index0] = arr[index1];
+        arr[index1] = a;
+
+    }
+
+
+
+</script>
+</body>
+</html>
