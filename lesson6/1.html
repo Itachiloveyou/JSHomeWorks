@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =  'hello world'
+    let b = 'lorem ipsum'
+    let c = 'javascript is cool'
+    console.log(a.length);
+    console.log(b.length);
+    console.log(c.length);
+
+
+    console.log(a.toUpperCase());
+    console.log(b.toUpperCase());
+    console.log(c.toUpperCase());
+
+
+    console.log(a.toLowerCase());
+    console.log(b.toLowerCase());
+    console.log(c.toLowerCase());
+
+    let str = ' dirty string   ';
+    let newStr = str.trim()
+    console.log(newStr);
+
+    let str2 = 'Ревуть воли як ясла повні';
+    console.log(str2.split(' '));
+
+    let arr = [10,8,-7,55,987,-1011,0,1050,0];
+    let newArr = arr.map(value => {
+        return value + '';
+    })
+    console.log(newArr);
+
+    function sortNums(arrOfNums, direction){
+        if (direction === 'asc') {
+            return arrOfNums.sort((a, b) => a - b)
+        } else if (direction === 'desc') {
+            return arr.sort((a, b) => b - a)
+        }
+
+    }
+
+    let coursesAndDurationArray = [
+
+        {title: 'JavaScript Complex', monthDuration: 5},
+
+    {title: 'Java Complex', monthDuration: 6},
+
+    {title: 'Python Complex', monthDuration: 6},
+
+    {title: 'QA Complex', monthDuration: 4},
+
+    {title: 'FullStack', monthDuration: 7},
+
+    {title: 'Frontend', monthDuration: 4}
+
+    ];
+    let map1 = coursesAndDurationArray
+        .sort((a, b) => b.monthDuration - a.monthDuration)
+        .filter(value => value.monthDuration > 5)
+        .map((value, index) => {
+        value.id = index + 1;
+        return value;
+        })
+
+    console.log(map1);
+
+    let coursesArray = [
+        {
+            title: 'JavaScript Complex',
+            monthDuration: 5,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+        },
+        {
+            title: 'Java Complex',
+            monthDuration: 6,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'angular',
+                'aws',
+                'docker',
+                'git',
+                'java core',
+                'java advanced']
+        },
+        {
+            title: 'Python Complex',
+            monthDuration: 6,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'angular',
+                'aws',
+                'docker',
+                'python core',
+                'python advanced']
+        },
+        {
+            title: 'QA Complex',
+            monthDuration: 4,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+        },
+        {
+            title: 'FullStack',
+            monthDuration: 7,
+            hourDuration: 909,
+            modules: ['html',
+                'css',
+                'js',
+                'mysql',
+                'mongodb',
+                'react',
+                'angular',
+                'aws',
+                'docker',
+                'git',
+                'node.js',
+                'python',
+                'java']
+        },
+        {
+            title: 'Frontend',
+            monthDuration: 4,
+            hourDuration: 909,
+            modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+        }
+    ];
+
+    console.log(coursesArray.filter(course => {
+        return course.modules.includes('sass')
+    }));
+    console.log(coursesArray.filter(course => {
+        return course.modules.includes('docker')
+    }));
+
+
+    let suits = ['spade', 'diamond', 'heart', 'club'];
+    let values = ['6','7','8','9','10','J','Q','K','A'];
+
+    let deck = [];
+
+    for (let suit of suits) {
+        for (let value of values) {
+            let color = (suit === 'diamond' || suit === 'heart') ? 'red' : 'black';
+            deck.push({card: value, suit: suit, color: color});
+        }
+    }
+
+    console.log(deck);
+
+    let finder = deck.find(card => card.card === 'A' && card.suit === 'club')
+    console.log(finder);
+
+
+    let filteredCards = deck.filter(card => card.card === '6')
+    console.log(filteredCards);
+
+    let filteredCards2 = deck.filter(card => card.color === 'red');
+    console.log(filteredCards2);
+
+    let filteredCards3 = deck.filter(card => card.suit === 'diamond' || card.suit === 'heart')
+    console.log(filteredCards3);
+
+    let highClubs = deck.filter(card => card.suit === 'club' && ['9','10','J','Q','K','A'].includes(card.card));
+    console.log(highClubs);
+
+
+
+    let FilteredCards4 = deck.reduce((acc, card) => {
+        acc[card.suit].push(card);
+        return acc;
+    },{
+        spades: [],
+        diamonds: [],
+        hearts: [],
+        clubs: []
+    });
+
+    console.log(FilteredCards4);
+
+
+</script>
+</body>
+</html>
