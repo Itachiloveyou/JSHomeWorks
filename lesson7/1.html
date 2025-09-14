@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+// function User(id, name, surname, phone){
+//     this.id = id;
+//     this.name = name;
+//     this.surname = surname;
+//     this.phone = phone;
+// }
+//     let users = [
+//         new User(1,'Kolya', 'Petrov', 3177831567),
+//         new User(5,'Kolya', 'Petrov', 3177831567),
+//         new User(3,'Kolya', 'Petrov', 3177831567),
+//         new User(7,'Kolya', 'Petrov', 3177831567),
+//         new User(9,'Kolya', 'Petrov', 3177831567),
+//         new User(4,'Kolya', 'Petrov', 3177831567),
+//         new User(2,'Kolya', 'Petrov', 3177831567),
+//         new User(8,'Kolya', 'Petrov', 3177831567),
+//         new User(6,'Kolya', 'Petrov', 3177831567),
+//         new User(10,'Kolya', 'Petrov', 3177831567),
+//     ];
+//
+//     let filteredUsers = users.filter(user => user.id % 2 === 0)
+//     console.log(filteredUsers);
+//
+//     let SortedUsers = users.sort((a, b) => a.id - b.id);
+//     console.log(SortedUsers);
+//
+//     function Client(id, name, surname, phone, email, ...products){
+//         this.id = id;
+//         this.name = name;
+//         this.surname = surname;
+//         this.phone = phone;
+//         this.email = email;
+//         this.order = products;
+//     }
+//
+//     function filt(title, price){
+//         this.title = title;
+//         this.price = price;
+//     }
+//
+//
+// let clients = [
+//         new Client(1,
+//             'Kolya',
+//             'Petrov',
+//             '3177831567',
+//             'asd@asd.com',
+//             new filt('TV', 13000),
+//             new filt('phone', 10000)),
+//
+//         new Client(2,
+//             'Kolya',
+//             'Petrov',
+//             '3177831567',
+//             'asd@asd.com',
+//             new filt('DvD', 90000),
+//             new filt('Iphone', 10000)),
+//
+//         new Client(3,
+//             'Kolya',
+//             'Petrov',
+//             '3177831567',
+//             'asd@asd.com',
+//             new filt('Station Phone', 13000),
+//             new filt('Washing Machine', 10000)),
+//
+//         new Client(4,
+//             'Kolya',
+//             'Petrov',
+//             '3177831567',
+//             'asd@asd.com',
+//             new filt('TV', 13000),
+//             new filt('phone', 10000)),
+//
+//     new Client(5,
+//             'Kolya',
+//             'Petrov',
+//             '3177831567',
+//             'asd@asd.com',
+//             new filt('TV', 13000),
+//             new filt('phone', 10000)),
+//
+//     ]
+//
+//     let clients1 = clients.sort((a, b) => a.order.lenght - b.order.lenght);
+//     console.log(clients1);
+//
+//     function Car (model, producer, year, maxSpeed, volume){
+//         this.model = model;
+//         this.producer = producer;
+//         this.year = year;
+//         this.maxSpeed = maxSpeed;
+//         this.volume = volume;
+//         this.drive = function(){
+//             console.log(`Едем со скоростью - ${this.maxSpeed}`)
+//         }
+//         this.info = function(){
+//             for (let key in this){
+//                 console.log(`${key} - ${this[key]}`);
+//             }
+//         }
+//         this.increaseMaxSpeed = function(newSpeed){
+//             this.maxSpeed += newSpeed;
+//         }
+//         this.changeYear = function (newValue){
+//             this.year = newValue;
+//         }
+//         this.addDriver = function (driver){
+//             if (driver){
+//                 this.driver = driver;
+//             }
+//         }
+//     }
+//     let car1 = new Car('Tesla', 'Mask', 2000, 300, '3,4')
+//     car1.drive()
+//     car1.info()
+//     car1.increaseMaxSpeed(5)
+//     car1.changeYear(2004)
+//     car1.addDriver('I am');
+
+
+    class Car1 {
+
+        constructor(model, producer, year, maxSpeed, volume) {
+            this.model = model;
+            this.producer = producer;
+            this.year = year;
+            this.maxSpeed = maxSpeed;
+            this.volume = volume;
+
+        }
+        drive (){
+            console.log(`Едем со скоростью - ${this.maxSpeed}`)
+        };
+        info(){
+            for (let key in this){
+                console.log(`${key} - ${this[key]}`);
+            }
+        };
+        increaseMaxSpeed(newSpeed){
+            this.maxSpeed += newSpeed;
+        };
+        changeYear(newValue){
+            this.year = newValue;
+        };
+        addDriver(driver){
+            if (driver){
+                this.driver = driver;
+            }
+        }
+    }
+let car1 = new Car1('Tesla', 'Mask', 2000, 300, '3,4')
+car1.drive()
+car1.info()
+car1.increaseMaxSpeed(5)
+car1.changeYear(2004)
+car1.addDriver('I am');
+
+
+
+    class Cinderella{
+        name;age;footsize
+
+
+        constructor(name, age, footsize) {
+            this.name = name;
+            this.age = age;
+            this.footsize = footsize;
+        }
+    }
+class Prince {
+
+    constructor(name, age, slipper) {
+        this.name = name;
+        this.age = age;
+        this.slipper = slipper;
+    }
+}
+
+    let cinderellas = [
+        new Cinderella('Nika', 20, 35),
+        new Cinderella('Dasha', 20, 36),
+        new Cinderella('Vika', 20, 37),
+        new Cinderella('Lina', 20, 38),
+        new Cinderella('Lika', 20, 30),
+
+    ]
+    let prince = new Prince('Dima', 20, 30)
+    for (let cinderella of cinderellas){
+        if (cinderella.footsize === prince.slipper){
+            console.log(`${prince.name} love ${cinderella.name}`)
+        }
+    }
+
+Array.prototype.myForEach = function(callback) {
+    for (let i = 0; i < this.length; i++) {
+        callback(this[i], i, this);
+
+    }
+};
+
+
+Array.prototype.myFilter = function(callback) {
+    let result = [];
+    for (let i = 0; i < this.length; i++) {
+        if (callback(this[i], i, this)) {
+            result.push(this[i]);
+        }
+    }
+    return result;
+};
+
+</script>
+</body>
+</html>
